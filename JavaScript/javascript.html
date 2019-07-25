@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function abc() {
+            alert("One click");
+        }
+        function xyz() {
+            alert("Double click");
+
+        }
+        function pqr() {
+            alert("Come over");
+        }
+        function mno() {
+            alert("Go Out");
+        }
+
+        function check() {
+           
+            var size = document.f1.t1.value.length;
+            console.log(size);
+            if (size < 5)
+                return false;
+            else {
+                return true;
+            }
+     
+        }
+
+    </script>
+
+</head>
+<body>
+    <h1> Java Script Demo</h1>
+    <hr>
+    <h2>
+        <script>
+            for (i = 0; i < 10; i++) {
+                document.write("Hello Everybody<br>");
+            }
+        </script>
+    <h3>THANKS</h3>
+        <form action="abc.html" name="f1" onsubmit="return check()">
+            <input type="text" name="t1" /><br>
+            <input type="submit" name="b1"  value="SUBMIT" />
+        </form>
+    </h2>
+    <input type="text" name="t2" onChange="alert('Enter Name')" />
+    <input type="button" name="b1" value="CLICK" onclick="abc()" />
+    <input type="button" name="b2" value="Double CLICK" onclick="xyz()" />
+    <input type="button" name="b3" value="Come Over" onclick="pqr()" />
+    <input type="button" name="b4" value="Go Out" onclick="mno()" />
+
+</body>
+</html>

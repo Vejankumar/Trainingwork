@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script >
+			function check(a,b)
+			{
+				if(isNaN(a.value) || isNaN(b.value) || a.value==="" || b.value==="")
+				{
+					alert("please enter integers");
+					return false;
+				}
+				return true;
+			}
+
+			function add()
+			{
+				var a = document.getElementById("one");
+				var b = document.getElementById("two");
+				if(check(a,b))
+				document.getElementById("s1").innerText = parseFloat(a.value)+parseFloat(b.value);
+			}
+
+			function sub()
+			{
+				var a = document.getElementById("one");
+				var b = document.getElementById("two");
+				if(check(a,b))
+				document.getElementById("s1").innerText = eval("a.value-b.value");
+			}
+
+			function mul()
+			{
+				var a = document.getElementById("one");
+				var b = document.getElementById("two");
+				if(check(a,b))
+				document.getElementById("s1").innerText = eval("a.value*b.value");
+			}
+
+			function div()
+			{
+				var a = document.getElementById("one");
+				var b = document.getElementById("two");
+				if(check(a,b))
+				document.getElementById("s1").innerText = eval("a.value/b.value");
+			}
+
+		</script>
+		
+
+	</head>
+
+	<body>
+		
+		Number 1 :<input type="text" id="one"><br><br>
+		Number 2 :<input type="text" id="two">
+		<br><br>
+		<h2>
+			Result is <span id="s1" />
+		</h2>
+		<button onclick="add()">Add</button> 
+		<button onclick="sub()">Subtract</button>
+		<button onclick="mul()">Multiply</button> 
+		<button onclick="div()">Division</button>
+	</body>
+</html>

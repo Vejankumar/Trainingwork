@@ -1,0 +1,103 @@
+<html>
+<body>
+<script type="text/javascript">  
+
+	function validate()
+	{  
+		var namelength=document.f1.name.value.length;  
+		var passwordlength=document.f1.password.value.length; 
+		var pass=document.f1.password.value;
+		var cpass=document.f1.cpassword.value;
+		var status=false;  
+		if(namelength < 6 || namelength > 10){  
+			document.getElementById("namelocation").innerHTML=  "Name length should be betweeen 6 and 10";  
+			status=false;
+		}
+		else
+			status = true;
+	  
+		if(passwordlength<4 || passwordlength>8)
+		{  
+			document.getElementById("passwordlocation").innerHTML=  "Password length should be betweeen 4 and 8";  
+			status=false; 
+		}
+
+		if(pass !== cpass)
+		{
+			document.getElementById("cpasswordlocation").innerHTML=  "Password and Confirm password should be same";  
+			status=false; 
+		}
+		return status;  
+	}  
+
+	function namerem()
+	{
+		document.getElementById("namelocation").innerHTML=  "";  
+	}
+	function passrem()
+	{
+		document.getElementById("passwordlocation").innerHTML=  "";  
+	}
+	function cpassrem()
+	{
+		document.getElementById("cpasswordlocation").innerHTML=  "";  
+	}
+	function agerem()
+	{
+		document.getElementById("agelocation").innerHTML=  "";  
+	}
+
+	function nameche()
+	{
+		var namelength=document.f1.name.value.length;
+		if(namelength < 6 || namelength > 10){  
+			document.getElementById("namelocation").innerHTML=  "Name length should be betweeen 6 and 10";  
+		}
+	}
+
+	function passche()
+	{
+		var passwordlength=document.f1.password.value.length; 
+		if(passwordlength<4 || passwordlength>8)
+		{  
+			document.getElementById("passwordlocation").innerHTML=  "Password length should be betweeen 4 and 8";  
+		}
+
+	}
+
+	function cpassche()
+	{
+		var pass=document.f1.password.value;
+		var cpass=document.f1.cpassword.value;
+		if(pass !== cpass)
+		{
+			document.getElementById("cpasswordlocation").innerHTML=  "Password and Confirm password should be same";   
+		}
+	}
+
+	function ageche()
+	{
+		var a=document.f1.age.value;
+		var b=parseInt(a);
+		if(a<5 || a>60)
+			document.getElementById("agelocation").innerHTML=  "Age should be between 5 and 60";   
+	}
+
+	function done()
+	{
+		alert("Registration Done");
+	}
+
+</script>  
+
+<form name="f1" >  
+	Login Id :<input type="text" id="name" onfocus="namerem()" onblur="nameche()"><span id="namelocation" style="color:red"></span><br><br>
+	Password :<input type="password" id="password" onfocus="passrem()" onblur="passche()"><span id="passwordlocation" style="color:red"></span><br><br>
+	Confirm Password :<input type="password" id="cpassword" onfocus="cpassrem()" onblur="cpassche()"><span id="cpasswordlocation" style="color:red"></span><br><br>
+	Age :<input type="number" id="age" onfocus="agerem()" onblur="ageche()"><span id="agelocation" style="color:red"></span><br><br>
+	<input type="submit" onclick="done()" value="register"/>
+</form>  
+</body>
+</html>
+
+ 
