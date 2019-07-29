@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+			function Emp(name,age,salary)
+			{
+					this.name = name;
+					this.age = age;
+					this.salary = salary;
+			}
+
+	</script>
+</head>
+<body>
+	<h1>Custom objects</h1>
+	<hr>
+	<script>
+			obj = new Object();
+			obj.name = "Ravi";
+			obj.age = 25;
+			obj.salary = 67000;
+
+			document.write("<br><br> Name : "+obj.name);
+			document.write("<br> Age : "+obj.age);
+			document.write("<br> Salary : "+obj.salary);
+	</script>
+	<br><br>
+	<hr>
+	<script>
+			e1 = new Emp("Suraj",22,15000);
+			e2 = new Emp("Manoj",33,45000);
+
+			document.write("<br><br> Name : "+e1.name);
+			document.write("<br> Age : "+e1.age);
+			document.write("<br> Salary : "+e1.salary);
+			
+			document.write("<br><br> Name : "+e2.name);
+			document.write("<br> Age : "+e2.age);
+			document.write("<br> Salary : "+e2.salary);
+	</script>
+	<br><br>
+	<hr>
+	<script>
+			j1 = {'name':'Pratap', 'age':28, 'salary':220000};
+			j2 = {'name':'Rajesh', 'age':23, 'salary':450000};
+
+			document.write("<br><br> Name : "+j1.name);
+			document.write("<br> Age : "+j1.age);
+			document.write("<br> Salary : "+j1.salary);
+
+			document.write("<br><br> Name : "+j2.name);
+			document.write("<br> Age : "+j2.age);
+			document.write("<br> Salary : "+j2.salary);
+
+	</script>
+	<br><br>
+	<hr>
+	<script>
+			document.write("<br>"+Math.PI);
+			document.write("<br>"+Math.E);
+			document.write("<br>"+Math.sqrt(256));
+			document.write("<br>"+Math.cbrt(27));
+			document.write("<br>"+Math.pow(2,5));
+	</script>
+
+</body>
+</html>
