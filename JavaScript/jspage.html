@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    div{
+        width : 400px;
+        height : 500px;
+        background-color: goldenrod;
+        color: white;
+        font-size:34px;
+    }
+    a{
+        padding : 10px;
+        background-color: brown;
+        color : white;
+        text-decoration: none;
+        position: relative;
+    }
+    #start{
+        top: 20%;
+        left: 25%;
+    }
+    #stop{
+        top:40%;
+        left:40%;
+    }
+    
+    </style>
+</head>
+<body>
+
+<div>
+    <span></span>
+    <a href="#" id="start">start</a>
+    <a href="#" id="stop">stop</a>
+
+</div>
+
+</body>
+
+<script>
+    let handle;
+    let count=0;
+    let timeOutInterval = (timeOutInMills = 1) => {
+    handle=setInterval(()=> {
+        document.querySelector('span').innerHTML= ++count;
+    }, timeOutInMills*1000)
+}
+
+    document.querySelector('#start').addEventListener('click',function(){
+        timeOutInterval();
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        count = 0;
+        document.querySelector('span').innerHTML= count;
+        clearInterval(handle);
+    })
+
+</script>
+</html>

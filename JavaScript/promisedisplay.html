@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    div{
+        width : 400px;
+        height : 500px;
+        font-size:22px;
+    }
+    a{
+        padding : 10px;
+        background-color: black;
+        color : white;
+        text-decoration: none;
+        top : 50%;
+        left : 50%
+    }
+    
+    </style>
+</head>
+<body>
+
+<div>
+    
+    <a href="#" id="filter">Filter</a>
+    <span></span>
+</div>
+
+</body>
+
+<script>
+
+    var str = '<ul>'
+                 fetch('http://jsonplaceholder.typicode.com/users')
+                .then((response)=>response.json())
+                .then(data=>{
+                    data.map(user=> str=str+`<li> ${user.name}</li>`)})
+                .then(data => {
+                    str = str+'</ul>'
+                })
+
+    document.querySelector('#filter').addEventListener('click',function(){
+        document.querySelector('span').innerHTML= str;
+    })
+
+
+</script>
+</html>
